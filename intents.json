@@ -1,0 +1,459 @@
+{
+        "intents": [
+            {
+                "tag": "greeting",
+                "patterns": [
+                    "Hi",
+                    "Hey",
+                    "Is anyone there?",
+                    "Hello",
+                    "Hay"
+                ],
+                "responses": [
+                    "Hello",
+                    "Hi",
+                    "Hi there"
+                ]
+            },
+            {
+                "tag": "goodbye",
+                "patterns": [
+                    "Bye",
+                    "See you later",
+                    "Goodbye"
+                ],
+                "responses": [
+                    "See you later",
+                    "Have a nice day",
+                    "Bye! Come back again"
+                ]
+            },
+            {
+                "tag": "thanks",
+                "patterns": [
+                    "Thanks",
+                    "Thank you",
+                    "That's helpful",
+                    "Thanks for the help"
+                ],
+                "responses": [
+                    "Happy to help!",
+                    "Any time!",
+                    "My pleasure",
+                    "You're most welcome!"
+                ]
+            },
+            {
+                "tag": "about",
+                "patterns": [
+                    "Who are you?",
+                    "What are you?",
+                    "Who you are?"
+                ],
+                "responses": [
+                    "I'm REDy, your bot assistant",
+                    "I'm REDy , an Artificial Intelligent bot"
+                ]
+            },
+            {
+                "tag": "name",
+                "patterns": [
+                    "what is your name",
+                    "what should I call you",
+                    "whats your name?"
+                ],
+                "responses": [
+                    "You can call me REDy.",
+                    "I'm REDy!",
+                    "Just call me as REDy"
+                ]
+            },
+            {
+                "tag": "help",
+                "patterns": [
+                    "Could you help me?",
+                    "give me a hand please",
+                    "Can you help?",
+                    "What can you do for me?",
+                    "I need a support",
+                    "I need a help",
+                    "support me please"
+                ],
+                "responses": [
+                    "Tell me how can assist you",
+                    "Tell me your problem to assist you",
+                    "Yes Sure, How can I support you"
+                ]
+            },
+            {
+                "tag": "cramps",
+                "patterns": [
+                    "Any advice for period cramps?",
+                    "Any guidance for period cramps?",
+                    "How to get rid of cramps?",
+                    "Solution of cramps"
+                ],
+                "responses": [
+                    "1. Exercise and stretch. It loosens up your muscles and eases the pain. 2. Rub your lower tummy. That helps relax the muscles. 3. Medicate.Try an over-the-counter pain reliever. These medicines can help make the cramps less severe. If you’re a teen, make sure to get the parental stamp of approval first.4. Heat things up.Take a warm bath or find a heating pad for your lower belly or back. A little heat goes a long way to reduce the effects of your menstrual cramps."
+                ]
+            },
+            {
+                "tag": "periods start",
+                "patterns": [
+                    "What age do women start menstruating?",
+                    "What age do ladies begin bleeding",
+                    "When is menarche?"
+                ],
+                "responses": [
+                    "Girls start menstruating at the average age of 12. However, girls can begin menstruating as early as 8 years of age or as late as 16 years of age. "
+                ]
+            },
+            {
+                "tag": "periods end",
+                "patterns": [
+                    "When will a woman stop having her period?",
+                    "When does a women have menopause? "
+                ],
+                "responses": [
+                    "Menstruation temporarily stops during pregnancy and resumes after birth. A period stops for good when a woman goes through the menopausal stage in their 40s or 50s."
+                ]
+            },
+            {
+                "tag": "difference",
+                "patterns": [
+                    " What is better sanitary napkins, tampons or menstrual cups?",
+                    "Difference between sanitary napkins, tampons and menstrual cups",
+                    "What is tampons?",
+                    "what is sanitary napkins?",
+                    "What is menstrual cups?"
+                ],
+                "responses": [
+                    "Sanitary pads: Sanitary pads, also known as sanitary napkins or menstrual pads, were one of the earliest forms of feminine hygiene and are still widely used today. Offered in various lengths and absorbancy levels, pads are often preferred by women on light-flow days or for when they might be spotting between periods. "
+                ]
+            },
+            {
+                "tag": "food",
+                "patterns": [
+                    "Any advise on what to consume for heathy, painfree and on time periods?",
+                    "What can we eat during periods",
+                    "Food to consume during periods."
+                ],
+                "responses": [
+                    "1.Pineapple generates heat in the body. So, eat high amounts of pineapple 10 prior to the due date. 2.Carrot contains beta carotene which encourages estrogen hormone. 3.Black grape contains flavonoids, minerals,vitamins C, K, A which also boosts the immune system. "
+                ]
+            },
+            {
+                "tag": "acne",
+                "patterns": [
+                    "How to prevent period breakouts?",
+                    "How to prevent acne during periods?",
+                    "Solutions for periods acne."
+                ],
+                "responses": [
+                    "One of the most frustrating aspects of period acne is that it usually just keeps coming back. Here are things you can do throughout your cycle to stay two steps ahead of those pesky hormones. OTC acne products: Products containing alpha hydroxy acids, such as glycolic acid and lactic acid, can help remove dead skin cells and prevent clogged pores. They also help stimulate the growth of new skin cells so your skin looks smoother and clearer. Diet: High-GI foods to worsen acne. They include:sugary foods and drinks white bread other highly processed foods"
+                ]
+            },
+            {
+                "tag": "sesame",
+                "patterns": [
+                    "Is it true that certain foods like dates and sesame bring on early menstruation?",
+                    "Myths about eating sesame on early menstruation"
+                ],
+                "responses": [
+                    "During menstruation, you’re simultaneously losing blood and undergoing rapid hormonal shifts. Opt for foods with ample nutrients like vitamins, minerals, water, protein, iron, and fiber. At the same time, try your best to avoid the following: Processed foods, spicy foods, alcohol"
+                ]
+            },
+            {
+                "tag": "reasons",
+                "patterns": [
+                    "Why do women have periods? ",
+                    "Reasons of periods",
+                    "Why do women have menstrual cycle?",
+                    "What is menstruation?"
+                ],
+                "responses": [
+                    "Menstruation is the body’s way of getting rid of some tissues that it no longer needs. These tissues are from the uterus where every month, it thickens its walls to prepare for pregnancy. If pregnancy does not happen, the tissue lining sheds off and comes out through the vagina. The process is called menstruation or period."
+                ]
+            },
+            {
+                "tag": "smell",
+                "patterns": [
+                    "Should a period smell?",
+                    "How does periods smell",
+                    "Is there any periods smell?",
+                    "What is menstruation ordor?"
+                ],
+                "responses": [
+                    "No, it shouldn’t. The odor you smell occurs when the blood becomes in contact with air. Frequently changing pads or tampons should deter the odor."
+                ]
+            },
+            {
+                "tag": "pain",
+                "patterns": [
+                    "Does periods hurt?",
+                    "does it pain?"
+                ],
+                "responses": [
+                    "Although the process itself does not hurt, there are women who experience menstrual cramps during their period. This is caused by the hormones that are released by the body in order to make the uterus contract so that it can push the lining out."
+                ]
+            },
+            {
+                "tag": "blood",
+                "patterns": [
+                    "How much blood is lost during a period?",
+                    "Blood loss during periods."
+                ],
+                "responses": [
+                    "Typically, about ¼ cup of menstrual fluid goes out of the body in the first few days of the period. This can either be more or less and it depends whether a woman is using hormonal medications like contraceptive pills which can alter menstrual amount and flow."
+                ]
+            },
+            {
+                "tag": "time",
+                "patterns": [
+                    "How long does periods last",
+                    "What is periods length",
+                    "how many days do we have periods?"
+                ],
+                "responses": [
+                    "The length of a period depends from woman to woman. There are many factors that can influence how long a cycle is like medications, physical activities, and even stress. To most women, a period averages between 2-8 days wiith the heavier flow on the first 2 days."
+                ]
+            },
+            {
+                "tag": "cravings",
+                "patterns": [
+                    "Why does it seem like a woman has cravings during a period?",
+                    "cravings during periods"
+                ],
+                "responses": [
+                    "The hormonal changes are to blame when it comes to menstrual cravings. Typically, a woman want to eat carbohydrate- rich foods as well as salty, sugary, and even greasy foods that makes a woman feel better during an uncomfortable period."
+                ]
+            },
+            {
+                "tag": "bath",
+                "patterns": [
+                    "Is taking a bath or having a shower okay during a period?",
+                    "showering during periods",
+                    "Is showering during periods safe?"
+                ],
+                "responses": [
+                    "Of course! It is vital that the body is clean and smelling fresh during a period. Aside from keeping the feminine area hygienic, having a shower or taking a bath will take away the uncomfortable feeling and will help keep the confidence up even with other people."
+                ]
+            },
+            {
+                "tag": "activities",
+                "patterns": [
+                    "Are there activities that should not be done during a period?",
+                    "What activities can we do during periods?"
+                ],
+                "responses": [
+                    "All the things you normally do can be done during a period as long as you are not experiencing cramps which may be uncomfortable when playing sports and other physically straining activities."
+                ]
+            },
+            {
+                "tag": "clothes",
+                "patterns": [
+                    "What are period clothes?",
+                    "Clothes for periods?",
+                    "What should we wear during periods?"
+                ],
+                "responses": [
+                    "There are women who prefer wearing loose clothes during a period since it is more comfortable. Others also have “period underwear” which are just normal underwear that are inexpensive so they do not worry about staining them with period spills."
+                ]
+            },
+            {
+                "tag": "late period",
+                "patterns": [
+                    "My period is 10 days late. Am I pregnant? ",
+                    " When is it considered a late period?",
+                    "How do I know if my period is late? ",
+                    "Am I pregnant if I didn't have my period? ",
+                    "How do I know if I'm pregnant? "
+                ],
+                "responses": [
+                    "Periods that are more than five days past due are considered late. There are a variety of reasons for late periods, including pregnancy. A home pregnancy test detects the presence of human chorionic growth hormone, or “pregnancy hormone,” in urine. Blood tests will also show this hormone and its quantity. "
+                ]
+            },
+            {
+                "tag": "pills",
+                "patterns": [
+                    "Can adapting to new birth control pills cause a period delay?",
+                    "Which birth control pills cause a delay in periods? ",
+                    "Why do some birth control pills cause a period delay "
+                ],
+                "responses": [
+                    " Adapting to new birth control pills can cause a period delay. A pregnancy test can confirm if a period is late due to pregnancy. It may take around three months for the body to adapt to new birth control."
+                ]
+            },
+            {
+                "tag": "mood swing",
+                "patterns": [
+                    "Is it normal to get emotional before a period?",
+                    "Why do I get emotional before my periods? ",
+                    "Why do I get mood swings around period time? "
+                ],
+                "responses": [
+                    " The period after ovulation and before menstruation is called the luteal phase. During this phase, the body is getting ready for pregnancy in case fertilization takes place. The main hormone during the luteal phase is progesterone.  Anxiety, mood fluctuations, headache, weight gain, and increased hunger are common premenstrual symptoms. Cyclic changes in progesterone and estrogen, excess prostaglandins, and fluctuations in serotonin levels are all responsible for premenstrual symptoms. About 80 percent of women experience premenstrual symptoms. As long as these symptoms do not disrupt everyday life, there is nothing to be concerned about. "
+                ]
+            },
+            {
+                "tag": "appetite",
+                "patterns": [
+                    "I have a big increase in hunger before my period. Is that normal? ",
+                    "Why does my appetite increase during periods? ",
+                    " Is it normal for appetite to increase during periods?",
+                    " Why does hunger increase during menstruation"
+                ],
+                "responses": [
+                    "Increased hunger, anxiety, mood fluctuations, headache, and weight gain are all common premenstrual symptoms. Premenstrual symptoms are the result of cyclic changes in progesterone and estrogen, and fluctuations in serotonin. Most people experience premenstrual symptoms before their period. As long as these symptoms do not disrupt everyday life, there is nothing to be concerned about. "
+                ]
+            },
+    {
+                "tag": "colour",
+                "patterns": [
+                    "Why is my period blood black? ",
+                    "Can period blood be black? ",
+                    "How does period blood become black? "
+                ],
+                "responses": [
+                    "It is absolutely normal for period blood to be black or dark brown at the very beginning or at the end of a period. At the beginning and end of menstruation, the flow is usually slow, and blood on the pad or tampon is old blood that has been exposed to oxygen. Menstrual discharge consists mostly of parts of the inner lining of the uterus — the inner lining of the uterine wall — and blood. It moves from the uterus to the vagina, where it is oxidized. Blood contains iron, which becomes black after oxidation. However, if menstrual blood is black throughout the whole period, it could indicate a problem. Be sure to contact a health care provider in this case."
+                ]
+            },
+    {
+                "tag": "antibiotics",
+                "patterns": [
+                    "Can antibiotics affect your period? ",
+                    "How do antibiotics affect periods ",
+                    "Do antibiotics harm my period? ",
+                    "Can I take antibiotics on my periods ",
+                    "Why is it advised not to take antibiotics when on periods? "
+                ],
+                "responses": [
+                    "Antibiotics do not cause late, early, or absent periods or heavy and prolonged menstruation. The most likely cause for an irregular period on antibiotics is usually the infection for which an antibiotic was prescribed. There is a long list of side effects for various antibiotics, but irregular or painful periods are not typically included. Rifampin is an exception. It is an antibiotic that is used to treat tuberculosis and has been proven to cause irregular or painful menstruation."
+                ]
+            },
+    {
+                "tag": "early period",
+                "patterns": [
+                    " How can I make my period come earlier?",
+                    " Can I make my periods come early?",
+                    "What are some tricks to make my periods start early? "
+                ],
+                "responses": [
+                    "People who are taking birth control pills can switch to placebo pills to schedule their period. However, taking placebo pills during the first 10 days of the pack can lead to heavy and prolonged periods. It’s better to consult a health care provider before making a switch.   Some people claim that vitamin C, ginger, parsley, turmeric, or other herbs can induce periods. However, there is no reliable scientific evidence that they work. "
+                ]
+            },
+    {
+                "tag": "after pill",
+                "patterns": [
+                    "I’m bleeding after taking the morning-after pill. Is it my period?",
+                    "Can morning-after pills cause periods ",
+                    "Can morning after pills cause bleeding ",
+                    "Why am I bleeding after taking my morning after pill? "
+                ],
+                "responses": [
+                    "The morning-after pill is a form of emergency contraception. It contains levonorgestrel, which is a synthetic form of the hormone progesterone. There is another type of emergency contraception that contains ulipristal acetate. The morning-after pill may cause unexpected uterine bleeding that should end before the next normal period starts. Emergency contraception pills can also cause the next period to come late or early or be heavier and more painful. The morning-after pill should not be used as a routine method of birth control. "
+                ]
+            },
+    {
+                "tag": "period kit",
+                "patterns": [
+                    "What should I put in a period kit?",
+                    "What should a period kit consist of?",
+                    "What things do I need on my period?",
+                    "What are some period must-haves?"
+                ],
+                "responses": ["Period kits are great to have on hand during menstruation. They can contain three to four pads or tampons. Pads should be changed at least every four hours, tampons every four to eight hours, and menstrual cups (changed and washed) every 10 to 12 hours.Painkillers such as non-steroidal anti-inflammatory drugs are a great option for managing menstrual cramps and make a good addition to a period kit. It can also contain extra underwear in case of spotting, hand sanitizer, wipes, and two to three small plastic bags."] 
+            },
+    {
+                        "tag": "miscarriage",
+                        "patterns": [
+                            "How long will I have irregular periods after a miscarriage?",
+                            " I just had a miscarriage. When will I get my period?",
+                            "Whill I get my normal period back after a miscarriage? "
+                        ],
+                        "responses": [
+                            "It usually takes four to six weeks for periods to start again after a miscarriage. Sometimes it can take up to three months for periods to become regular. Try to relax, rest, maintain a healthy diet, and exercise regularly. If the menstrual cycle doesn’t become regular by three months after the miscarriage, contact a health care provider to find out the cause."
+                        ]
+                    },
+    {
+                        "tag": "pregnancy",
+                        "patterns": [
+                            "Do irregular periods influence the ability to get pregnant? ",
+                            "How do irregular periods affect pregnancy? ",
+                            "Why is my irregular period affecting my pregnancy? "
+                        ],
+                        "responses": [
+                            " Irregular periods can influence the ability to get pregnant. Stress, bodyweight fluctuations, PCOS, hyperprolactinemia, and hyper- or hypofunction of the thyroid gland can all cause irregular periods. Irregular periods are usually associated with problems with ovulation, which may influence the ability to get pregnant. "
+                        ]
+                    },
+    
+                       
+    
+    {
+                        "tag": "irregular periods",
+                        "patterns": [
+                            "What causes irregular periods? ",
+                            "Why are my periods irregular? ",
+                            " What causes random menstruation?"
+                        ],
+                        "responses": [
+                            "There are also many possible reasons for irregular periods. The most likely are excessive stress, extreme exercising, or extreme weight fluctuations. Just like with late periods, irregular periods can also be caused by PCOS, high levels of prolactin, or thyroid issues. "
+                        ]
+                    },
+    
+    {
+                        "tag": "delay",
+                        "patterns": [
+                            "What are some reasons for a period delay? ",
+                            "Why is my period delayed? ",
+                            " Why does periods sometimes comes late?"
+                        ],
+                        "responses": [
+                            "There are many possible reasons for a late period. For people who are trying to conceive or had unprotected sex, pregnancy is the most likely reason. Late periods can also be caused by medical conditions such as PCOS, high levels of prolactin, or thyroid issues. Sometimes using hormonal birth control methods can also cause late periods. "
+                        ]
+                    },
+    {
+                        "tag": "short cycle",
+                        "patterns": [
+                            "When is a menstrual cycle too short?",
+                            "When is a menstrual cycle considered too short? ",
+                            "When is a period too short?"
+                        ],
+                        "responses": [
+                            "The length of the menstrual cycle is the number of days between the first day of one period and the first day of the next period. Cycles between 21 and 35 days are considered normal. If menstruation starts more frequently than every 21 days, it may be considered too short. "
+                        ]
+                    },
+    
+    {
+                        "tag": "irregular",
+                        "patterns": [
+                            "Is it normal to have periods twice a month? ",
+                            "What is a normal period length? ",
+                            " What causes irregular bleeding?"
+                        ],
+                        "responses": [
+                            " For menstrual cycles that are 21 days long, it’s possible to have a period twice during one calendar month. However, bleeding twice or more during one menstrual cycle, blood after sex, or bleeding that stops and then starts again after several days could indicate a health issue. Hormonal imbalance, ovarian cysts, endometriosis, uterine fibroids, pelvic inflammatory disease, and cervical neoplasia can cause irregular bleeding. If there is any bloody vaginal discharge outside of a normal period, visit a health care provider to find out what’s causing it."
+                        ]
+                    },
+    {
+                        "tag": "no period",
+                        "patterns": [
+                            "How long without a period is normal? ",
+                            "Why am I not getting my period? ",
+                            "Have I lost my period?"
+                        ],
+                        "responses": [
+                            "Menstrual cycles that are 21–35 days long are considered normal. A period is considered late if it’s more than five days past its expected start date. Sometimes a period delay can be due to stress or rapid weight loss. More rarely, it may be a sign of an endocrine condition like polycystic ovary syndrome (PCOS), thyroid dysfunction, hyperprolactinemia, or another health issue. If your period is late, take a pregnancy test and don’t hesitate to visit a health care provider.If your periods are late for several months, make sure to consult a health care provider to figure out possible underlying reasons. "
+                        ]
+                    },
+    {
+                        "tag": "ovulate",
+                        "patterns": [
+                            "Is it true that pregnancy is possible before a period? ",
+                            "Can I get pregnant just before my period ?",
+                            "Can I prevent pregnancy by timing my ovulation?"
+                        ],
+                        "responses": ["It depends on a woman’s cycle but a woman is normally ovulating about 2 weeks before a menstrual flow so if there is intercourse during that time then pregnancy is a possibility. This is why preventing pregnancy by timing the ovulation is risky since there are factors that changes a woman’s cycle and makes it unpredictable to tell when she is ovulating or not."]
+                   }
+                ]
+            }

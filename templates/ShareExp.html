@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/apple-icon.png">
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+    <title>Share experiences </title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto+Slab:400,700|Material+Icons"
+        rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="/static/nucleo-icons.css" rel="stylesheet" />
+    <link href="/static/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="/static/nucleo-svg.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="/static/home.css" rel="stylesheet" />
+
+    <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+    <link rel="icon" href="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: monospace;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            border: 1px solid white;
+            border-radius: 5px;
+            color: #ce9e62;
+            display: inline-block;
+            font-size: 3em;
+            margin: 5;
+            padding: 10px;
+        }
+
+        #chatbox {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10%;
+            margin-top: 60px;
+        }
+
+        #userInput {
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            margin-top: 60px;
+        }
+
+        #textInput {
+            width: 90%;
+            border: none;
+            border-bottom: 3px solid black;
+            font-family: 'Alegreya';
+            font-size: 17px;
+        }
+
+        .userText {
+            color: white;
+            background-color: #4b6777;
+            font-family: 'Alegreya';
+            font-size: 17px;
+            text-align: right;
+            line-height: 30px;
+            border-radius: 5px;
+        }
+
+        .userText span {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .botText {
+            color: #ce9e62;
+            background-color: #2c2c2c;
+            font-family: 'Alegreya';
+            font-size: 17px;
+            text-align: left;
+            line-height: 30px;
+            border-radius: 5px;
+        }
+
+        .botText span {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .boxed {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            margin-top: 60px;
+            border-radius: 5px;
+        }
+
+        input[type=text] {
+            bottom: 0;
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            position: fixed;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body class="presentation-page">
+    <!-- Navbar -->
+   <!-- Navbar -->
+   <div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+        <div class="col-12">
+            <nav
+                class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+                <div class="container-fluid px-0">
+                    <a class="navbar-brand font-weight-bolder ms-sm-3"
+                        href="home" rel="tooltip"
+                        title="beREDY" data-placement="bottom" >
+                        beREDy
+                    </a>
+
+                    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                        <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
+
+                            <li class="nav-item ms-lg-auto ms-3 ms-lg-0">
+                                <a href="https://www.creative-tim.com/product/soft-ui-design-system-pro"
+                                    class="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1 mt-2 mt-md-0">Sign
+                                    Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </div>
+    </div>
+</div>
+
+    </section>
+
+
+    <section class="pt-3 pb-4" id="count-stats" >
+        <div class="container">
+            <div class="row" style="margin-top: 90px; float: center;">
+                {% for i in exp %}
+                <div class="col-lg-4 px-lg-1 mt-lg-0 mt-4" >
+                    <div class="me-4 box  info-horizontal bg-gray-100 border-radius-xl p-5 box">
+
+                        <div class="description ps-5" style="margin-top: 13px;">
+                            <h5>{{i['title']}}</h5>
+                            <p>{{i['text'][0:150]}}..</p>
+
+
+                            <div class="row mt-5">
+                                <div class="col-sm-3 col-6 mx-2">
+
+                                    <div style="width: 100px;">
+                                        <a class="text-primary icon-move-right" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
+                                            Read more
+                                            <i class="fas fa-arrow-right text-sm ms-1"></i>
+                                        </a>
+                                    </div>
+
+
+
+                                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">{{i['title']}}</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                   {{i['text']}}
+                                                </div>
+                                                <div class="modal-footer justify-content-between">
+                                                    <button type="button" class="btn bg-gradient-dark"
+                                                        data-bs-dismiss="modal">Back</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- <div class="col-lg-4 px-lg-1 mt-lg-0 mt-4">
+                    <div class="info-horizontal bg-gray-100 border-radius-xl p-5 box">
+
+                        <div class="description ps-5" style="margin-top: 13px;">
+                            <h5>Walking to Womanhood</h5>
+                            <p>I was 10 years old. I didn't have a mom around to tell me anything. Any female people
+                                around me were all kinda stuck up and hush hush about..</p>
+
+
+                            <div class="row mt-5">
+                                <div class="col-sm-3 col-6 mx-2">
+
+                                    <div style="width: 100px;">
+                                        <a class="text-primary icon-move-right" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal1">
+                                            Read more
+                                            <i class="fas fa-arrow-right text-sm ms-1"></i>
+                                        </a>
+                                    </div>
+
+
+
+                                    <div class="modal fade" id="exampleModal1" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">First period</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    I was 10 years old. I didn't have a mom around to tell me anything.
+                                                    Any female people around me were all kinda stuck up and hush hush
+                                                    about everything. So I knew absolutely nothing. I hadn't heard
+                                                    anything from school yet, I knew nothing about what was going
+                                                    on.<br>
+                                                    So, one day at school I had the worst headache I had ever had and
+                                                    couldn't focus on my work. I kept asking the teacher if she could do
+                                                    anything but since I didn't have any medicine in the school she
+                                                    couldn't help me. Finally, we went to the bathroom as a class before
+                                                    lunch and when I wiped I saw bright red blood. I completely freaked
+                                                    out thinking I was actually dying since blood should not appear out
+                                                    of the body, especially there<br>
+                                                    So I go back to the classroom only to find nobody there. Goody
+                                                    two-shoes that I was, instead of running terrified down to my
+                                                    teacher or the nurse, I fast walked without breaking rules to tell
+                                                    my teacher. She calmed me down and I called both my parents and told
+                                                    them what had happened.
+
+                                                    After school, I called my mom again and before I could say anything
+                                                    "HI WOMAN!!!!!!!!" came out of her mouth. Absolutely mortified for
+                                                    the day.
+                                                </div>
+                                                <div class="modal-footer justify-content-between">
+                                                    <button type="button" class="btn bg-gradient-dark"
+                                                        data-bs-dismiss="modal">Back</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="col-lg-4 px-lg-1 mt-lg-0 mt-4">
+                    <div class="info-horizontal bg-gray-100 border-radius-xl p-5 box">
+
+                        <div class="description ps-5" style="margin-top: 13px;">
+                            <h5>No extra pad </h5>
+                            <p>I had always used pads and hated them. So, I decided to use tampons. I wore a tampon to
+                                school and everything was fine for the first half.. </p>
+
+
+                            <div class="row mt-5">
+                                <div class="col-sm-3 col-6 mx-2">
+
+                                    <div style="width: 100px;">
+                                        <a class="text-primary icon-move-right" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal2">
+                                            Read more
+                                            <i class="fas fa-arrow-right text-sm ms-1"></i>
+                                        </a>
+                                    </div>-->
+
+
+                                    <!-- Modal -->
+               <!-- <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">No extra pad</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                I had always used pads and hated them. So, I decided to use tampons.
+                                I wore a tampon to school and everything was fine for the first half
+                                of the day. During lunch, I had to go change my tampon. For some
+                                reason, I decided to not do it.
+
+                                So, during 6th period, I begin to feel some blood on my pants. But I
+                                thought I was probably imagining it, and just went on.
+
+                                [su_quote]As 6th period ended, I realized my period was actually
+                                leaking. Thank god I wore black jeans! [/su_quote]
+                                I tied a jacket around my waist, just in case. When I got to 7th
+                                period, I looked in my bag for a tampon or pad. I thought I had
+                                something, but NO! I didn’t have anything with me. I went to the
+                                bathroom to check and of course, there was blood all over my
+                                underwear. I did not know what to do.
+
+                                I had P.E. next, and it just happened to be the day where I was
+                                going to be sprinting. I told a teacher and went to the office, so I
+                                could get a pad. But when I got there, a random guy was standing
+                                there talking to the lady. I didn’t want to ask her for a pad in
+                                front of the guy, so I just asked her if I could call my mom. I
+                                called my mom and got her to pick me up. I was probably the happiest
+                                person ever when she showed up.
+                            </div>
+                            <div class="modal-footer justify-content-between">
+                                <button type="button" class="btn bg-gradient-dark" data-bs-dismiss="modal">Back</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+        </div>
+        </div> -->
+
+        <!-- <div class="col-lg-4 px-lg-1 mt-lg-0 mt-4">
+            <div class="info-horizontal bg-gray-100 border-radius-xl p-5 box">
+
+                <div class="description ps-5" style="margin-top: 13px;">
+                    <h5>Foreign To Me</h5>
+                    <p>It was 2016 and we were on a 6 week trip to America. As soon as we arrived, I went
+                        straight to bed and when I woke up to take a poop, there.. </p>
+
+
+                    <div class="row mt-5">
+                        <div class="col-sm-3 col-6 mx-2">
+
+                            <div style="width: 100px;">
+                                <a class="text-primary icon-move-right" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal4">
+                                    Read more
+                                    <i class="fas fa-arrow-right text-sm ms-1"></i>
+                                </a>
+                            </div>
+
+
+                            
+                            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Foreign To Me</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            It was 2016 and we were on a 6 week trip to America. As soon as we
+                                            arrived, I went straight to bed and when I woke up to take a poop,
+                                            there was blood in the toilet. My mum had to run to a chemist to get
+                                            some pads. Keep in mind we didn’t bring any pads and we were in a
+                                            country we didn’t know. My mum had to run to a chemist to get some
+                                            pads. I thought I was dying!
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn bg-gradient-dark"
+                                                data-bs-dismiss="modal">Back</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="col-lg-4 px-lg-1 mt-lg-0 mt-4">
+            <div class="info-horizontal bg-gray-100 border-radius-xl p-5 box">
+
+                <div class="description ps-5" style="margin-top: 13px;">
+                    <h5>Hey Google</h5>
+                    <p>One fateful day, 10 year old me went to bed and slept as usual. A few hours later, I was
+                        woken up by a wet sensation and my first thought was.. </p>
+
+
+                    <div class="row mt-5">
+                        <div class="col-sm-3 col-6 mx-2">
+
+                            <div style="width: 100px;">
+                                <a class="text-primary icon-move-right" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal5">
+                                    Read more
+                                    <i class="fas fa-arrow-right text-sm ms-1"></i>
+                                </a>
+                            </div>
+
+
+                            
+                            <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Hey Google</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            One fateful day, 10 year old me went to bed and slept as usual. A
+                                            few hours later, I was woken up by a wet sensation and my first
+                                            thought was that I had peed myself. After seeing that I was sitting
+                                            on a giant red spot, I knew it wasn't pee.
+                                            <br>
+                                            I heard about periods before and I suspected this was my period but
+                                            I wasn't for sure and I didn't want to tell my mom. So I went to
+                                            Google for answers. All the results were not relevant to me so I
+                                            concluded that this was my period.
+                                            <br>
+                                            I was extremely embarrassed so I did not tell my mom. Ultimately,
+                                            she still found out when she used my bathroom and found blood on the
+                                            toilet paper. All she did was reassure me there was nothing to worry
+                                            about and handed me some pads.
+                                            <br>
+                                            There was still some curiosity inside me, so again, I resorted to
+                                            Google. Google told me about menstrual cycles and that I was now a
+                                            woman capable of getting pregnant and that the blood was actually
+                                            the lining of my uterus.
+                                            <br>
+                                            After about 6 days, I stopped bleeding and breathed out a sigh of
+                                            relief. But deep down, I knew this was not over yet and this would
+                                            happen about every month from now on for about 40 years.
+                                            <br>
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn bg-gradient-dark"
+                                                data-bs-dismiss="modal">Back</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="col-lg-4 px-lg-1 mt-lg-0 mt-4">
+            <div class="info-horizontal bg-gray-100 border-radius-xl p-5 box">
+
+                <div class="description ps-5" style="margin-top: 13px;">
+                    <h5>Period Product Investigation</h5>
+                    <p>I got my period at the age of 12 (that was 2012), and like most girls, I had little
+                        former education ..</p>
+
+
+                    <div class="row mt-5">
+                        <div class="col-sm-3 col-6 mx-2">
+
+                            <div style="width: 100px;">
+                                <a class="text-primary icon-move-right" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal6">
+                                    Read more
+                                    <i class="fas fa-arrow-right text-sm ms-1"></i>
+                                </a>
+                            </div>
+
+
+                            
+                            <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Period Product
+                                                Investigation</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            I got my period at the age of 12 (that was 2012), and like most
+                                            girls, I had little former education about it. I relied on gossip
+                                            from friends, TV ads, and my 7th grade CBSE textbook, which barely
+                                            mentioned it.
+                                            <br>
+                                            I was alone at home when I felt something weird in my underpants. To
+                                            my horror and disgust – it was stained red. I did not inform my mom
+                                            until the end of day. I slept all day in pain and finally talked
+                                            about it when I was left with no other choice.
+                                            <br>
+                                            I WAS MORTIFIED TO FOUND OUT THAT THIS WAS TO HAPPEN EVERY MONTH
+                                            <br>
+                                            My mom took me to a private room and taught me how to use a pad and
+                                            a cloth. In my first few months (I was mortified to found out that
+                                            this was to happen every month), I used cloth, which caused
+                                            abrasions on the skin, and I hated the whole process of washing it
+                                            every time.
+                                            <br>
+                                            I eventually switched to conventional sanitary napkins available in
+                                            the market. Though easier to use, my skin itched and burnt. My mom
+                                            kept urging me to go back to cloth, as she was concerned about the
+                                            chemicals in the pads.
+                                            <br>
+                                            There was no way I was going back. It was then I started looking
+                                            into other menstrual hygiene products.
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn bg-gradient-dark"
+                                                data-bs-dismiss="modal">Back</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="col-lg-4 px-lg-1 mt-lg-0 mt-4">
+            <div class="info-horizontal bg-gray-100 border-radius-xl p-5 box">
+
+                <div class="description ps-5" style="margin-top: 13px;">
+                    <h5>the.worst.period</h5>
+                    <p style="margin-bottom: 25px;">In middle school I had the. worst. periods. They were often
+                        so heavy that I bleed through both a super tampon and super pad (was wearing..</p>
+
+
+                    <div class="row mt-5">
+                        <div class="col-sm-3 col-6 mx-2">
+
+                            <div style="width: 100px;">
+                                <a class="text-primary icon-move-right" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal7">
+                                    Read more
+                                    <i class="fas fa-arrow-right text-sm ms-1"></i>
+                                </a>
+                            </div>
+
+
+                         
+                            <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">the.worst.period</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            In middle school I had the. worst. periods. They were often so heavy
+                                            that I bleed through both a super tampon and super pad (was wearing
+                                            the two simultaneously) in an hour in a half on more than one
+                                            occasion. Between the hemorraging and the cramp-induced vomiting, I
+                                            missed several days of school per semester. Now, when I was in
+                                            middle school I was also drastically underweight and as a result had
+                                            very irregular periods that started with no warning.
+                                            <br>
+                                            One day I was sitting in homeroom when I suddenly felt incredibly
+                                            nauseated and dizzy. I was too dizzy and disoriented to make it to
+                                            the bathroom and so I threw up in my backpack. That's when the
+                                            horror dawned on me: there was more to come because I was starting
+                                            my period. My homeroom teacher was an epic douche who seemed to get
+                                            off on punishing me in particular so my desk was crowded in a corner
+                                            that obscured me from the view both she and my classmates.
+                                            <br>
+                                            I deliberated with myself for about 10 minutes (while the vomit
+                                            dried in my backpack) and decided the only thing I could do was call
+                                            my mom. As I mentioned, this teacher was a total douche and so I
+                                            then wasted 10 more precious minutes steeling myself to ask to use
+                                            the phone. Let's take stock: at this point I'm now cowering in the
+                                            hidden corner, bleeding profusely through my sundress, clutching a
+                                            backpack full of vomit and running a fever (the fever part happened
+                                            often with my period as well). I HAD to get home.
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn bg-gradient-dark"
+                                                data-bs-dismiss="modal">Back</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="col-lg-4 px-lg-1 mt-lg-0 mt-4">
+            <div class="info-horizontal bg-gray-100 border-radius-xl p-5 box">
+
+                <div class="description ps-5" style="margin-top: 13px;">
+                    <h5>Last day of Period</h5>
+                    <p style="margin-bottom: 25px;">It was the last day of my period, and there hadn’t been any
+                        blood for the day so I decided not to wear a pad. I was taking the train home from ..
+                    </p>
+
+
+                    <div class="row mt-5">
+                        <div class="col-sm-3 col-6 mx-2">
+
+                            <div style="width: 100px;">
+                                <a class="text-primary icon-move-right" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal8">
+                                    Read more
+                                    <i class="fas fa-arrow-right text-sm ms-1"></i>
+                                </a>
+                            </div>
+
+
+                           
+                            <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Last day of Period
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            It was the last day of my period, and there hadn’t been any blood
+                                            for the day so I decided not to wear a pad. I was taking the train
+                                            home from school. I got a seat on the reserve seat even though my
+                                            destination was just a few stops away… Bad move! I didn’t realise it
+                                            until I got up and made my way to alight, but there was blood on the
+                                            seat!!! The man sitting beside me looked disgusted and horrified. I
+                                            didn’t know if I should go back and clean the seat. All I could do
+                                            was to run out of the train. That was so embarrassing. And like any
+                                            other period accidents, I had to use my sweater to cover the back of
+                                            skirt. Moral of the story: Never EVER ditch the pads!
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn bg-gradient-dark"
+                                                data-bs-dismiss="modal">Back</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="col-lg-4 px-lg-1 mt-lg-0 mt-4">
+            <div class="info-horizontal bg-gray-100 border-radius-xl p-5 box">
+
+                <div class="description ps-5" style="margin-top: 13px;">
+                    <h5>bouts of diarrhea.</h5>
+                    <p> Every month when my period is near, I will have bouts of diarrhea.
+                        I’d be lucky if I’m near a toilet but there was once where I was on..</p>
+
+
+                    <div class="row mt-5">
+                        <div class="col-sm-3 col-6 mx-2">
+
+                            <div style="width: 100px;">
+                                <a class="text-primary icon-move-right" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal9">
+                                    Read more
+                                    <i class="fas fa-arrow-right text-sm ms-1"></i>
+                                </a>
+                            </div>
+
+
+                            
+                            <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">bouts of diarrhea</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Every month when my period is near, I will have bouts of diarrhea.
+                                            I’d be lucky if I’m near a toilet but there was once where I was on
+                                            a bus and I really needed to go. I alighted at the next stop and ran
+                                            to the nearest toilet, and the minute I sat down my stomach went
+                                            BALLISTIC! Imagine what could’ve happened if I didn’t have a toilet
+                                            to go to?
+                                            <br>
+
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn bg-gradient-dark"
+                                                data-bs-dismiss="modal">Back</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div> -->
+
+
+
+
+
+
+
+        </div>
+        </div>
+    </section>
+
+    <div class="container " style="margin-bottom: 40px;">
+        <div class="row mt-5">
+            <div class="col-sm-3 col-6 mx-auto">
+                <!-- Button trigger modal -->
+                
+                <button type="button" class="btn bg-gradient-primary" >
+                    <a style="color: white;" href="ShareExp"> Refresh</a>
+                </button>
+                <button type="button" class="btn bg-gradient-primary" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal10">
+                    Add Your Experiences
+                </button>
+
+                <!-- Modal -->
+                <form method="POST" action="{{ url_for('ShareExp') }}" name="form2" id="form2">
+                <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Share your experience</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            
+                            
+                            <textarea name="title" rows="1" cols="50" style="margin: 10px 20px 0px 30px; padding: 10px; " placeholder="Title"></textarea>
+                            
+                            <textarea name="text" rows="5" cols="50" style="margin: 50px 20px 0px 30px; padding: 10px; " placeholder="Text"></textarea>
+                            
+                            <div class="modal-footer justify-content-between">
+                                <!-- <button type="button" class="btn bg-gradient-dark"
+                                    data-bs-dismiss="modal">Close</button> -->
+                                    <input type="submit" value="Share" class="btn bg-gradient-primary">
+                                    <div class="clearfix"></div>
+                                <!-- <button type="button" class="btn bg-gradient-primary">Share</button> -->
+                            </div>
+                       
+                        </div>
+                    </div>
+                </div> </form>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!--   Core JS Files   -->
+    <script src="/static/popper.min.js" type="text/javascript"></script>
+    <script src="/static/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/static/perfect-scrollbar.min.js"></script>
+    <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+    <script src="/static/countup.min.js"></script>
+    <!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
+    <script src="/static/rellax.min.js"></script>
+    <!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
+    <script src="/static/tilt.min.js"></script>
+    <!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
+    <script src="/static/choices.min.js"></script>
+    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+    <script src="/static/parallax.min.js"></script>
+    <!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+    <script src="/static/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script>
+    <script type="text/javascript">
+        if (document.getElementById('state1')) {
+            const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+            if (!countUp.error) {
+                countUp.start();
+            } else {
+                console.error(countUp.error);
+            }
+        }
+        if (document.getElementById('state2')) {
+            const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+            if (!countUp1.error) {
+                countUp1.start();
+            } else {
+                console.error(countUp1.error);
+            }
+        }
+        if (document.getElementById('state3')) {
+            const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+            if (!countUp2.error) {
+                countUp2.start();
+            } else {
+                console.error(countUp2.error);
+            };
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/apple-icon.png">
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+    <title>
+        Home-Page
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto+Slab:400,700|Material+Icons"
+        rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="/static/nucleo-icons.css" rel="stylesheet" />
+    <link href="/static/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="/static/nucleo-svg.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="/static/home.css" rel="stylesheet" />
+</head>
+
+<body class="presentation-page">
+
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <div class="container position-sticky z-index-sticky top-0">
+        <div class="row">
+            <div class="col-12">
+                <nav
+                    class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+                    <div class="container-fluid px-0">
+                        <a class="navbar-brand font-weight-bolder ms-sm-3"
+                            href="home" rel="tooltip"
+                            title="beREDY" data-placement="bottom" >
+                            beREDy
+                        </a>
+
+                        <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                            <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
+
+                                <li class="nav-item ms-lg-auto ms-3 ms-lg-0">
+                                    <a href="https://www.creative-tim.com/product/soft-ui-design-system-pro"
+                                        class="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1 mt-2 mt-md-0">Sign
+                                        Out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+    <header>
+        <div class="page-header min-vh-100">
+            <div>
+                <img class="position-absolute fixed-top ms-auto w-50 h-100 z-index-0 d-none d-sm-none d-md-block border-radius-section border-top-end-radius-0 border-top-start-radius-0 border-bottom-end-radius-0"
+                    src="/static/curved8.jpg" alt="image">
+            </div>
+
+            <div class="container py-5">
+                <div class="row"><br><br>
+                    <div class="col-lg-7 d-flex justify-content-center flex-column"
+                        style="margin-left: 25%; margin-top: 40px; ">
+                        <div class="card card-body d-flex  shadow-lg p-5 blur col-lg-6  d-flex  flex-column"
+                            style="width: 500px; text-align: center;">
+
+                            <h3 class="text-gradient text-primary" style="text-align: center;">Your Report</h3>
+                            {% if op==1 %}
+                            <h4 class="mb-4" style=" text-align: center;">You are LIKELY to suffer from PCOS</h4>
+                            {% else %}
+                            <h4 class="mb-4" style="text-align: center;">You are UNLIKELY to suffer from PCOS</h4>
+                            {% endif %}
+                            <p class="lead pe-5 me-5" style="text-align: center; margin-left: 32px;width: 400px;">The time is now for it be okay to be great. People in this world
+                                shun people for being nice. </p>
+                            <div class="buttons">
+                                
+                                <button type="button"  class="btn text-gradient text-primary shadow-none mt-4"><a href="#suggestion" >Read more</a></button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+    </header>
+    <!-- suggestions -->
+    <section class="py-7" id="suggestion">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto text-center">
+                    
+                    {% if var==1 %}
+                    <!-- <h2 class="mb-0">Home Remedies</h2> -->
+                    <h2 class="text-gradient text-primary mb-3">Home Remedies</h2>
+                    <p  class="lead">Here are a few remedies you can try out at home to take better care of yourself </p>
+                            {% else %}
+                            <!-- <h2 class="mb-0">Precautionary Measures</h2> -->
+                            <h2 class="text-gradient text-primary mb-3">Precautionary Measures</h2>
+                            <p class="lead">Here are a few precautions you must take into consideration</p>
+                            {% endif %}
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 5px;">
+
+            <div class="col-lg-4 ms-auto mt-lg-0 mt-4">
+                <div class="card shadow-lg">
+                    <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+                        <div class="d-block blur-shadow-image">
+                            <!-- <iframe src="https://www.youtube.com/embed/JvbjrLESPs" frameborder="0"></iframe> -->
+                            <img src="/static/yoga.jpg"
+                                alt="img-blur-shadow" class="img-fluid shadow rounded-3">
+                        </div>
+                        <div class="colored-shadow"
+                            style="background-image: url(&quot;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/funny.jpg&quot;);">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="https://bebodywise.com/blog/best-yoga-poses-for-pcos/">
+                            <h5 class="mt-3">
+                                Yoga
+                            </h5>
+                        </a>
+                        <p>
+                            Find out how PCOS, a common health disorder in women, can be reversed and prevented by yoga. Read to find the six best yoga poses for PCOS
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 ms-auto mt-lg-0 mt-4">
+                <div class="card shadow-lg">
+                    <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+                        <div class="d-block blur-shadow-image">
+                            <img src="/static/diet.jpg"
+                                alt="img-blur-shadow" class="img-fluid shadow rounded-3">
+                        </div>
+                        <div class="colored-shadow"
+                            style="background-image: url(&quot;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/funny.jpg&quot;);">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="https://www.medicalnewstoday.com/articles/323002">
+                            <h5 class="mt-3">
+                                Diet 
+                            </h5>
+                        </a>
+                        <p>
+                            Some researchTrusted Source has shown that diet can help reduce the impact of PCOS. Learn more about a PCOS diet in this article
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 ms-auto mt-lg-0 mt-4">
+                <div class="card shadow-lg">
+                  <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+                    <div class="d-block blur-shadow-image">
+                      <img src="/static/imp.jpg" style="height: 275px;width: 400px;">
+                    </div>
+                    <div class="colored-shadow" style="background-image: url(&quot;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/funny.jpg&quot;);"></div>
+                  </div>
+                  <div class="card-body">
+                    <a href="https://www.healthline.com/health/womens-health/natural-treatment-pcos#_noHeaderPrefixedContent">
+                      <h5 class="mt-3">
+                        Points to take care of
+                      </h5>
+                    </a>
+                    <p>
+                        You may be able to manage these factors and ease your symptoms through lifestyle changes, but there’s no one-size-fits-all approach to treatment
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+
+
+
+
+
+    </section>
+
+    <!-- suggestion ends -->
+
+
+    <script src="/static/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script>
+    <script type="text/javascript">
+        if (document.getElementById('state1')) {
+            const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+            if (!countUp.error) {
+                countUp.start();
+            } else {
+                console.error(countUp.error);
+            }
+        }
+        if (document.getElementById('state2')) {
+            const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+            if (!countUp1.error) {
+                countUp1.start();
+            } else {
+                console.error(countUp1.error);
+            }
+        }
+        if (document.getElementById('state3')) {
+            const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+            if (!countUp2.error) {
+                countUp2.start();
+            } else {
+                console.error(countUp2.error);
+            };
+        }
+    </script>
+</body>
+
+</html>

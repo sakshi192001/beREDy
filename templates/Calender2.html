@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/bootstrap/main.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/bootstrap/main.min.css">
+    <link id="pagestyle" href="/static/home.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.2.0/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.2.0/main.js"></script>
+
+<!-- interaction plugin must be included after core -->
+<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.2.0/main.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.2.0/main.min.css" rel="stylesheet"/>
+
+<style>
+    html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+#calendar {
+  width: 900px;
+  height: 50px;
+  margin: 40px auto;
+  
+}
+</style>
+<button type="submit" style="width: 25px;height: 15px;" class="btn btn-lg bg-gradient-primary btn-lg mt-4 mb-0">Login</button>
+
+<div id="calendar" style="height: 700px;">
+   
+        
+        <script>
+            let calenderEl = document.getElementById('calendar')
+
+            let calendar = new FullCalendar.Calendar(calenderEl, {
+                
+                events:[
+                    {% for event in events %}
+                    {
+                        title: '{{event.todo}}',
+                        start:  '{{event.date}}',
+                    },
+                    {% endfor %}
+                ],
+                plugins: [ 'dayGrid', 'interaction' ],
+            });
+            calendar.render();
+        </script>
+    </div>
+</body>
+</html>

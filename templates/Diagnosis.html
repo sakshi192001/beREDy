@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <title>
+        Home-Page
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto+Slab:400,700|Material+Icons"
+        rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="/static/nucleo-icons.css" rel="stylesheet" />
+    <link href="/static/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="/static/nucleo-svg.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="/static/home.css" rel="stylesheet" />
+</head>
+
+<body class="presentation-page">
+
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <div class="container position-sticky z-index-sticky top-0">
+        <div class="row">
+            <div class="col-12">
+                <nav
+                    class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+                    <div class="container-fluid px-0">
+                        <a class="navbar-brand font-weight-bolder ms-sm-3"
+                            href="home" rel="tooltip"
+                            title="beREDY" data-placement="bottom" >
+                            beREDy
+                        </a>
+
+                        <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                            <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
+
+                                <li class="nav-item ms-lg-auto ms-3 ms-lg-0">
+                                    <a href="https://www.creative-tim.com/product/soft-ui-design-system-pro"
+                                        class="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1 mt-2 mt-md-0">Sign
+                                        Out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+    <header>
+
+
+        <div class="page-header">
+            <div class="position-absolute fixed-top ms-auto  h-100 rounded-3 z-index-0 d-none d-sm-none d-md-block me-n4 "
+                style="background-color:rgb(255, 83, 163) ; background-size: cover;">
+            </div>
+
+            <div class="container py-5">
+                <div class="row"><br><br>
+                    <div class="col-lg-7 d-flex justify-content-center flex-column"
+                        style="margin-left: 19%; margin-top: 40px; ">
+                        <div class="card card-body d-flex justify-content-center shadow-lg p-5 blur align-items-center">
+                            <h3 class="text-center text-gradient text-primary">Personal Information</h3>
+                            <form role="form" id="contact-form" method="POST" autocomplete="off">
+                                <div class="card-body">
+
+                                    <!-- <div class="mb-4">
+                                        <label>Blood Group</label>
+                                        <div class="input-group">
+                                            <input name="bg" type="text" class="form-control" placeholder="B+">
+                                        </div>
+                                    </div> -->
+
+                                    {{ pr }}
+                                    <div class="mb-4">
+                                        <label>BMI</label>
+                                        <div class="input-group">
+                                            <input name="bmi" type="number" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label>Pulse Rate(bpm)</label>
+                                        <div class="input-group">
+                                            <input name="pulse" type="number" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label>Respiratory Rate(breaths/min)</label>
+                                        <div class="input-group">
+                                            <input name="rr" type="number" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label>Heamoglobin(g/dl)</label>
+                                        <div class="input-group">
+                                            <input name="heamo" type="number" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-4 ">
+                                        <label>Pregnant</label>
+                                        <br>
+                                        <select name="preg" class="btn dropdown-toggle form-control" id="pregnant" >
+                                            <option aria-labelledby="dropdownMenuButton" value="1">Yes</option>
+                                            <option aria-labelledby="dropdownMenuButton" value="0" >No</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label>No. of aborptions</label>
+                                        <div class="input-group">
+                                            <input name="abort" type="number" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label>Waist:Hip Ratio</label>
+                                        <div class="input-group">
+                                            <input name="waist" type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label>Weight gain</label>
+                                        <br>
+                                        <select name="weight" class="btn dropdown-toggle form-control"   >
+                                            <option aria-labelledby="dropdownMenuButton" value="1">Yes</option>
+                                            <option aria-labelledby="dropdownMenuButton" value="0" >No</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label>Hair growth</label>
+                                        <br>
+                                        <select name="growth" class="btn dropdown-toggle form-control" >
+                                            <option aria-labelledby="dropdownMenuButton" value="1">Yes</option>
+                                            <option aria-labelledby="dropdownMenuButton" value="0" >No</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label>Hair loss</label>
+                                        <br>
+                                        <select name="loss" class="btn dropdown-toggle form-control"  >
+                                            <option aria-labelledby="dropdownMenuButton" value="1">Yes</option>
+                                            <option aria-labelledby="dropdownMenuButton" value="0" >No</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label>Skin darkening</label>
+                                        <br>
+                                        <select name="skin" class="btn dropdown-toggle form-control" >
+                                            <option aria-labelledby="dropdownMenuButton" value="1">Yes</option>
+                                            <option aria-labelledby="dropdownMenuButton" value="0" >No</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label>Pimples</label>
+                                        <br>
+                                        <select name="pimples" class="btn dropdown-toggle form-control"  >
+                                            <option aria-labelledby="dropdownMenuButton" value="1">Yes</option>
+                                            <option aria-labelledby="dropdownMenuButton" value="0" >No</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label>Regular Exercise</label>
+                                        <br>
+                                        <select name="reg_ex" class="btn dropdown-toggle form-control" >
+                                            <option aria-labelledby="dropdownMenuButton" value="1">Yes</option>
+                                            <option aria-labelledby="dropdownMenuButton" value="0" >No</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label>BP Systolic (mmHg)</label>
+                                        <div class="input-group">
+                                            <input name="sys" type="number" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label>BP Diastolic (mmHg)</label>
+                                        <div class="input-group">
+                                            <input name="dia" type="number" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                   
+                                    
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-check form-switch mb-4">
+                                                <input class="form-check-input" type="checkbox"
+                                                    id="flexSwitchCheckDefault" checked="">
+                                                <label class="form-check-label " for="flexSwitchCheckDefault">I agree to
+                                                    share my personal information. <a href="javascript:;"
+                                                        class="text-gradient text-primary"><u>Terms and
+                                                            Conditions</u></a>.</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn bg-gradient-primary w-100">
+                                                Check</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+    <!-- -------- END HEADER 1 w/ text and image on right ------- -->
+
+    <!--   Core JS Files   -->
+    <script src="/static/popper.min.js" type="text/javascript"></script>
+    <script src="/static/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/static/perfect-scrollbar.min.js"></script>
+    <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+    <script src="/static/countup.min.js"></script>
+    <!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
+    <script src="/static/rellax.min.js"></script>
+    <!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
+    <script src="/static/tilt.min.js"></script>
+    <!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
+    <script src="/static/choices.min.js"></script>
+    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+    <script src="/static/parallax.min.js"></script>
+    <!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+    <script src="/static/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script>
+    <script type="text/javascript">
+        if (document.getElementById('state1')) {
+            const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+            if (!countUp.error) {
+                countUp.start();
+            } else {
+                console.error(countUp.error);
+            }
+        }
+        if (document.getElementById('state2')) {
+            const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+            if (!countUp1.error) {
+                countUp1.start();
+            } else {
+                console.error(countUp1.error);
+            }
+        }
+        if (document.getElementById('state3')) {
+            const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+            if (!countUp2.error) {
+                countUp2.start();
+            } else {
+                console.error(countUp2.error);
+            };
+        }
+    </script>
+</body>
+
+</html>

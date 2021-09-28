@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/apple-icon.png">
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+    <title>
+        Chatbot-Page
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="/static/nucleo-icons.css" rel="stylesheet" />
+    <link href="/static/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="/static/nucleo-svg.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="/static/home.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+    <link rel="icon" href="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: monospace;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            border: 1px solid white;
+            border-radius: 5px;
+            color: #ce9e62;
+            display: inline-block;
+            font-size: 3em;
+            margin: 5;
+            padding: 10px;
+        }
+
+        #chatbox {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+            box-sizing: content-box;
+            margin-top: 60px;
+        }
+
+        #userInput {
+            margin-left: 85px;
+            
+            width: 40%;
+            margin-top: 60px;
+        }
+
+        #textInput {
+            width: 90%;
+            border: none;
+            border-bottom: 3px solid black;
+            font-family: 'Alegreya';
+            font-size: 17px;
+        }
+
+        .userText {
+            color: white;
+            background-color: #fd2d95;
+            font-family: 'Alegreya';
+            font-size: 17px;
+            text-align: right;
+            line-height: 30px;
+            border-radius: 5px;
+        }
+
+        .userText span {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .botText {
+            color: white;
+            background-color: #7a7a7a;
+            font-family: 'Alegreya';
+            font-size: 17px;
+            text-align: left;
+            line-height: 30px;
+            border-radius: 5px;
+        }
+
+        .botText span {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .boxed {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            margin-top: 60px;
+            border-radius: 5px;
+        }
+
+        input[type=text] {
+            bottom: 0;
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            position: fixed;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body class="contact-us">
+    <!-- Navbar -->
+    <div class="container position-sticky z-index-sticky top-0">
+        <div class="row">
+            <div class="col-12">
+                <nav
+                    class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+                    <div class="container-fluid px-0">
+                        <a class="navbar-brand font-weight-bolder ms-sm-3"
+                            href="home" rel="tooltip"
+                            title="beREDY" data-placement="bottom" >
+                            beREDy
+                        </a>
+
+                        <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                            <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
+
+                                <li class="nav-item ms-lg-auto ms-3 ms-lg-0">
+                                    <a href="https://www.creative-tim.com/product/soft-ui-design-system-pro"
+                                        class="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1 mt-2 mt-md-0">Sign
+                                        Out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+            </div>
+        </div>
+    </div>
+    <!-- -------- START HEADER 8 w/ card over right bg image ------- -->
+
+    <header>
+        <div class="page-header min-vh-100">
+            <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
+                <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center">
+                  <img src="jnu/static/pattern-lines.svg" alt="pattern-lines" class="position-absolute opacity-4 start-0 fixed-top ms-auto w-50 h-100 z-index-0 d-none d-sm-none d-md-block border-radius-section border-top-end-radius-0 border-top-start-radius-0 border-bottom-end-radius-0">
+                  <div class="position-relative">
+                    <img class="max-width-500 w-100 position-relative z-index-2" src="/static/chat.png">
+                  </div>
+                  
+                </div>
+              </div>
+
+
+            <div class="col-lg-7 d-flex justify-content-center flex-column"
+                        style="margin-left: 7%; margin-top: 10px;  width: 900px;">
+                <div class="card card-body d-flex  shadow-lg p-5 blur col-lg-6  d-flex  flex-column"
+                    style="width: 500px;">
+<!-- Chat box Starts -->
+
+                    <div class="container py-1">
+                        <h3 class="text-gradient text-primary " style="text-align: center; margin-bottom: 20px;">Talk to REDy</h3>
+                        <div class="boxed">
+                            <div>
+                            <div id="chatbox">
+                            </div>
+                            </div>
+                            <div id="userInput" >
+                                <input id="nameInput" style="margin-bottom: 30px;"  class="form-control form-control-lg" type="text" name="msg" placeholder="Ask me anything..." />
+                            </div>
+                            <!-- <br><br><br> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Chat box End -->        
+
+
+                
+            </div>
+        </div>
+
+
+    </header>
+    <script>
+        function getBotResponse() {
+          var rawText = $("#nameInput").val();
+          var userHtml = '<div style="text-align: right"><p class="userText" ><span>' + rawText + "</span></p></div>";
+          $("#nameInput").val("");
+          $("#chatbox").append(userHtml);
+          document
+            .getElementById("userInput")
+            .scrollIntoView({ block: "start", behavior: "smooth" });
+          $.get("/get", { msg: rawText }).done(function(data) {
+            var botHtml = '<div  style="text-align: left"><p class="botText"><span>' + data + "</span></p></div>";
+            $("#chatbox").append(botHtml);
+            document
+              .getElementById("userInput")
+              .scrollIntoView({ block: "start", behavior: "smooth" });
+          });
+        }
+        $("#nameInput").keypress(function(e) {
+          if (e.which == 13) {
+            getBotResponse();
+          }
+        });
+</script>
+
+
+
+</body>
+
+</html>
