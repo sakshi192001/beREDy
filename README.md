@@ -1,4 +1,4 @@
-# DataPirates_beREDy
+# beREDy
 
 The problem beREDy solves
 Menstruating women face numerous issues ranging from dissatisfactory sanitary products to unawareness about periods, from unbearable cramps to difficulty keeping track of your period and our app is created to solve just that.
